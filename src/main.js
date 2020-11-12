@@ -16,8 +16,11 @@ $(document).ready(function() {
     currentTamagotchi = this.value;
     $("#current-tamagotchi-name").text(tamagotchiArray[currentTamagotchi].Name);
     $("#current-tamagotchi-img").text(tamagotchiArray[currentTamagotchi].Image);
-    const currentState = tamagotchiArray[currentTamagotchi].stateControl;
+    //const currentState = tamagotchiArray[currentTamagotchi].stateControl;
     // talk with Travis
+    const currentFood = currentState(stat1).food;
+    const currentRest = currentState(stat2).rest;
+    const currentPlay = currentState(stat3).play;
     $("#food-value").text(`Food: ${currentFood}`)
     $("#rest-value").text(`Rest: ${currentRest}`)
     $("#play-value").text(`Play: ${currentPlay}`)
@@ -26,13 +29,13 @@ $(document).ready(function() {
   //Food
   $("#feed").click(function() {
     const newState = tamagotchiArray[currentTamagotchi].stateControl(feed);
-    $("#feed-value").text(`Food: ${newState.food}`);
+    $("#food-value").text(`Food: ${newState.food}`);
   });
 
   //Sleep
   $("#sleep").click(function () {
     const newState = tamagotchiArray[currentTamagotchi].stateControl(sleep);
-    $("#sleep-value").text(`Rest: ${newState.rest}`);
+    $("#rest-value").text(`Rest: ${newState.rest}`);
   });
 
   //Play

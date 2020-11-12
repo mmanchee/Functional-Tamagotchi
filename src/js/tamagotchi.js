@@ -13,7 +13,7 @@ const tamagotchiArray = []
 let currentTamagotchi = 0;
 
 // function factory 
-const change = (prop) => {
+const changeState = (prop) => {
   return (value) => {
     return (state) => ({
       ...state,
@@ -22,10 +22,13 @@ const change = (prop) => {
   };
 };
 
+const stat1 = changeState("food")(0);
 const feed = changeState("food")(1);
 
+const stat2 = changeState("rest")(0);
 const sleep = changeState("rest")(1);
 
+const stat3 = changeState("play")(0);
 const play = changeState("play")(1);
 
 
