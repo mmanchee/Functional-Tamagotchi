@@ -4,34 +4,48 @@
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-    <script type="text/javascript" src="plant.js"></script>
+    <script type="text/javascript" src="main.js"></script>
     <title>Grow Your Plant</title>
   </head>
   <body>
     <div class="container">
-      <div class="jumbtotron">TaMaGoTcHi</div>
-
-      <div class="newTamagotchi">
-        <input id="tamamgotchiName" type="text">
-        <button class="btn btn-info" id="newTamagotchi">Add Tamagotchi</button>
+      <div class="jumbotron">
+        <h1>TaMaGoTcHi</h1>
       </div>
-      <div class="yourTamagotchis">
-        <h3>Your Tamagotchis:</h3>
-        <ul id="yourTamagotchis">
-        </ul>
+      <div class="row">
+        <div class="col-3">
+          <div class="new-tamagotchi">
+            <input id="tamagotchi-name" type="text">
+            <button class="btn btn-info" id="new-tamagotchi">Add Tamagotchi</button>
+          </div>
+          <div class="your-tamagotchis">
+            <h3>Your Tamagotchis:</h3>
+            <ul id="your-tamagotchis">
+            </ul>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="current-tamagotchi">
+            <h3><span id="current-tamagotchi-name"></span></h3>
+          </div>
+          <div class="do-stuff-buttons">
+            <button class="btn btn-success" id="feed">Sustenance</button>
+            <button class="btn btn-warning" id="sleep">Tyty</button>
+            <button class="btn btn-danger" id="play">Fun Thyme</button>
+          </div> 
+          <h2> Current Tamagotchi's Stats:</h2>
+          <h4><div id="food-value">0</div></h4>
+          <h4><div id="rest-value">0</div></h4>
+          <h4><div id="play-value">0</div></h4>
+        </div>
       </div>
-      <div class="currentTamagotchi">
-        <h3><span id="currentTamagotchiName"></span></h3>
-      </div>
-      <div class="doStuffButtons">
-        <button class="btn btn-success" id="feed">Sustenance</button>
-        <button class="btn btn-warning" id="sleep">Tyty</button>
-        <button class="btn btn-danger" id="play">Fun Thyme</button>
-      </div> 
-      <h2> Current Tamagotchi's Stats:</h2>
-      <h4><div id="food-value">0</div></h4>
-      <h4><div id="rest-value">0</div></h4>
-      <h4><div id="play-value">0</div></h4>
     </div>
   </body>
 </html>
+
+<!-- <img src="https://img.pokemondb.net/artwork/croconaw.jpg"/>@Html.RadioButton("image","https://img.pokemondb.net/artwork/croconaw.jpg",false)
+  <img src="https://img.pokemondb.net/artwork/charmander.jpg"/>@Html.RadioButton("image", "https://img.pokemondb.net/artwork/charmander.jpg",true)
+  <img src="https://img.pokemondb.net/artwork/pikachu.jpg"/>@Html.RadioButton("image", "https://img.pokemondb.net/artwork/pikachu.jpg",false)
+  <img src="https://img.pokemondb.net/artwork/clefairy.jpg"/>@Html.RadioButton("image", "https://img.pokemondb.net/artwork/clefairy.jpg", false)
+  <img src="https://img.pokemondb.net/artwork/vileplume.jpg"/>@Html.RadioButton("image", "https://img.pokemondb.net/artwork/vileplume.jpg", false)
+  <img src="https://img.pokemondb.net/artwork/psyduck.jpg"/>@Html.RadioButton("image", "https://img.pokemondb.net/artwork/psyduck.jpg", false)  -->
